@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Test Page - AI Copy Tool Challenge</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .article {
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .sidebar {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .token-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            position: relative;
+        }
+
+        .fine-print {
+            font-size: 8px;
+            color: #666;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+            opacity: 0.7;
+        }
+
+        .hidden-token {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            font-size: 6px;
+            color: #999;
+            transform: rotate(-15deg);
+            opacity: 0.3;
+        }
+
+        .floating-text {
+            position: fixed;
+            top: 10%;
+            right: 10%;
+            font-size: 10px;
+            color: #ccc;
+            transform: rotate(45deg);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 72px;
+            color: rgba(200, 200, 200, 0.1);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .complex-list {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #007acc;
+        }
+
+        .nested-content {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .nested-item {
+            flex: 1;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        .tiny-text {
+            font-size: 9px;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .random-elements {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .random-shape {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(0, 122, 204, 0.1);
+            border-radius: 50%;
+            top: 20%;
+            left: 15%;
+        }
+
+        .invisible-text {
+            position: absolute;
+            font-size: 1px;
+            color: transparent;
+            top: -10px;
+            left: -10px;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to Our Complex Test Website</h1>
+            <p>This page contains various elements designed to test AI copy tools and their limitations.</p>
+        </div>
+
+        <div class="main-content">
+            <div class="article">
+                <h2>Article Section</h2>
+                <p>This is a sample article with multiple paragraphs and various formatting elements. The purpose of this page is to create a challenging environment for automated content extraction tools.</p>
+
+                <div class="token-container">
+                    <span class="fine-print" id="main-token">Loading token...</span>
+                    <span class="hidden-token" id="hidden-token">Loading...</span>
+                </div>
+
+                <h3>Complex List Structure</h3>
+                <div class="complex-list">
+                    <ul>
+                        <li>Primary item with <strong>bold text</strong></li>
+                        <li>Secondary item with <em>italic emphasis</em>
+                            <ul>
+                                <li>Nested item 1</li>
+                                <li>Nested item 2 with <code>inline code</code></li>
+                            </ul>
+                        </li>
+                        <li>Third item with <a href="#">link text</a></li>
+                    </ul>
+                </div>
+
+                <div class="nested-content">
+                    <div class="nested-item">
+                        <h4>Left Column</h4>
+                        <p>Content in the left column with some text that might be relevant or irrelevant to the main purpose.</p>
+                        <span class="tiny-text">Additional tiny text content</span>
+                    </div>
+                    <div class="nested-item">
+                        <h4>Right Column</h4>
+                        <p>Content in the right column with different text to create variability.</p>
+                        <span class="tiny-text">More tiny text for complexity</span>
+                    </div>
+                </div>
+
+                <blockquote>
+                    "This is a blockquote that contains some philosophical text to add depth to the page content and make parsing more challenging for AI systems."
+                </blockquote>
+
+                <p>Additional paragraph with various inline elements: <strong>bold</strong>, <em>italic</em>, <code>code</code>, and <mark>highlighted text</mark>.</p>
+            </div>
+
+            <div class="sidebar">
+                <h3>Sidebar Content</h3>
+                <p>Sidebar with additional information that might confuse automated extraction.</p>
+
+                <div class="token-container">
+                    <span class="fine-print">Secondary token: <span id="secondary-token">Loading...</span></span>
+                </div>
+
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <div class="tiny-text">
+                    Copyright © 2024 Test Website<br>
+                    All rights reserved. This content is for testing purposes only.
+                </div>
+            </div>
+        </div>
+
+        <div class="random-elements">
+            <div class="watermark">TEST PAGE</div>
+            <div class="random-shape"></div>
+            <div class="floating-text">Random floating text</div>
+            <div class="invisible-text" id="invisible-token">Invisible token content</div>
+        </div>
+
+        <div class="footer">
+            <p>This website was created to test the limitations of AI-powered content extraction tools. The page includes various elements with different sizes, positions, and visibility levels.</p>
+            <div class="token-container">
+                <span class="fine-print">Footer token: <span id="footer-token">Loading...</span></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Generate random tokens
+        function generateToken(length = 32) {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
+            let result = '';
+            for (let i = 0; i < length; i++) {
+                result += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return result;
+        }
+
+        // Set tokens when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const mainToken = generateToken(48);
+            const secondaryToken = generateToken(24);
+            const hiddenToken = generateToken(16);
+            const footerToken = generateToken(36);
+            const invisibleToken = generateToken(20);
+
+            document.getElementById('main-token').textContent = mainToken;
+            document.getElementById('secondary-token').textContent = secondaryToken;
+            document.getElementById('hidden-token').textContent = hiddenToken;
+            document.getElementById('footer-token').textContent = footerToken;
+            document.getElementById('invisible-token').textContent = invisibleToken;
+        });
+    </script>
+</body>
+</html>
