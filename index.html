@@ -175,6 +175,12 @@
                     <span class="hidden-token" id="hidden-token">Loading...</span>
                 </div>
 
+                <div class="token-container">
+                    <div style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: 200px;">
+                        <span class="fine-print" id="truncated-token">Loading truncated code...</span>
+                    </div>
+                </div>
+
                 <h3>Complex List Structure</h3>
                 <div class="complex-list">
                     <ul>
@@ -264,12 +270,14 @@
             const hiddenToken = generateToken(16);
             const footerToken = generateToken(36);
             const invisibleToken = generateToken(20);
+            const truncatedToken = generateToken(64); // Longer token to test truncation
 
             document.getElementById('main-token').textContent = mainToken;
             document.getElementById('secondary-token').textContent = secondaryToken;
             document.getElementById('hidden-token').textContent = hiddenToken;
             document.getElementById('footer-token').textContent = footerToken;
             document.getElementById('invisible-token').textContent = invisibleToken;
+            document.getElementById('truncated-token').textContent = truncatedToken;
         });
     </script>
 </body>
