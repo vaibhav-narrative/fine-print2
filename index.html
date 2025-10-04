@@ -223,16 +223,12 @@
                     <span class="fine-print">Secondary token: <span id="secondary-token">Loading...</span></span>
                 </div>
 
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-
-                <div class="tiny-text">
-                    Copyright © 2024 Test Website<br>
-                    All rights reserved. This content is for testing purposes only.
+                <div class="token-container" style="margin-top: 15px;">
+                    <div style="font-family: 'Courier New', monospace; font-size: 10px; background: #2d3748; color: #e2e8f0; padding: 8px; border-radius: 4px; overflow-x: auto;">
+                        <div id="curl-command" style="white-space: pre-wrap;">curl -X POST https://api.example.com/auth \
+  -H "Content-Type: application/json" \
+  -d '{"token":"Loading..."}'</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -271,6 +267,7 @@
             const footerToken = generateToken(36);
             const invisibleToken = generateToken(20);
             const truncatedToken = generateToken(64); // Longer token to test truncation
+            const curlToken = generateToken(32); // Token for curl command
 
             document.getElementById('main-token').textContent = mainToken;
             document.getElementById('secondary-token').textContent = secondaryToken;
@@ -278,6 +275,11 @@
             document.getElementById('footer-token').textContent = footerToken;
             document.getElementById('invisible-token').textContent = invisibleToken;
             document.getElementById('truncated-token').textContent = truncatedToken;
+
+            // Update curl command with random token
+            document.getElementById('curl-command').textContent = `curl -X POST https://api.example.com/auth \\
+  -H "Content-Type: application/json" \\
+  -d '{"token":"${curlToken}"}'`;
         });
     </script>
 </body>
