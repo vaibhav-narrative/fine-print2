@@ -169,6 +169,12 @@
             <div class="article">
                 <h2>Article Section</h2>
                 <p>This is a sample article with multiple paragraphs and various formatting elements. The purpose of this page is to create a challenging environment for automated content extraction tools.</p>
+
+                <div class="token-container">
+                    <span class="fine-print" id="main-token">Loading token...</span>
+                    <span class="hidden-token" id="hidden-token">Loading...</span>
+                </div>
+
                 <div class="token-container">
                     <div style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: 200px;">
                         <span class="fine-print" id="truncated-token">Loading truncated code...</span>
@@ -263,7 +269,7 @@
             const truncatedToken = generateToken(64); // Longer token to test truncation
             const curlToken = generateToken(32); // Token for curl command
 
-            document.getElementById('main-token').textContent = mainToken;
+            document.getElementById('main-token').textContent = "";
             document.getElementById('secondary-token').textContent = secondaryToken;
             document.getElementById('hidden-token').textContent = hiddenToken;
             document.getElementById('footer-token').textContent = footerToken;
